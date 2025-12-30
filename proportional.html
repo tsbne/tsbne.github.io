@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="images/fav.png">
+  <title>समानुपातिक उम्मेद्वारहरू निर्वाचन २०८२</title>
+
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@100..900&display=swap');
+
+    :root {
+      --bg-page: #ffffff;
+      --card-bg: #ffffff;
+      --text-primary: #1a1a1a;
+      --text-secondary: #555555;
+      --border-color: #e0e0e0;
+      --shadow: rgba(0, 0, 0, 0.08);
+      --accent: #2e7d32;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg-page: #121212;
+        --card-bg: #1a1a1a;
+        --text-primary: #f0f0f0;
+        --text-secondary: #b0b0b0;
+        --border-color: #333333;
+        --shadow: rgba(0, 0, 0, 0.3);
+      }
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Noto Sans Devanagari',
+      background-color: var(--bg-page);
+      color: var(--text-primary);
+      line-height: 1.6;
+      padding: 16px;
+      max-width: 1000px;
+      margin: 0 auto;
+      font-size: 1.05em;
+    }
+
+    h1 {
+      text-align: center;
+      margin: 24px 0 32px;
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 1.7em;
+    }
+
+    .cards-container {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .candidate-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 3px 10px var(--shadow);
+      text-align: center;
+    }
+
+    /* Square image container: width = 100%, height = width */
+    .candidate-photo {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 1px solid var(--border-color);
+      background: var(--bg-page);
+      display: block;
+      margin: 0 auto 16px;
+    }
+
+    .candidate-name {
+      font-size: 1.35em;
+      font-weight: 700;
+      margin: 12px 0 8px;
+      color: var(--accent);
+    }
+
+    .candidate-detail {
+      font-size: 1.05em;
+      color: var(--text-secondary);
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+
+    .candidate-party,
+    .candidate-cluster {
+      color: var(--text-secondary);
+      font-size: 1em;
+      margin: 6px 0;
+    }
+
+    @media (min-width: 600px) {
+      .cards-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 900px) {
+      .cards-container {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    /* ===== Floating Buttons ===== */
+    .floating-btn {
+      position: fixed;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s, background 0.2s;
+      z-index: 1000;
+      font-family: 'Noto Sans', sans-serif;
+      font-size: 1.1em;
+    }
+
+    .back-home {
+      top: 20px;
+      left: 20px;
+      background: var(--accent);
+      color: white;
+    }
+
+    .back-top {
+      bottom: 20px;
+      right: 20px;
+      background: var(--text-primary);
+      color: white;
+    }
+
+    .back-home:hover,
+    .back-top:hover {
+      transform: scale(1.08);
+      opacity: 0.95;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .back-top {
+        background: #444;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>चर्चित समानुपातिक उम्मेद्वारहरू निर्वाचन २०८२</h1>
+
+  <div class="cards-container">
+
+    <!-- Real Candidate -->
+    <div class="candidate-card">
+      <img src="images/photo/rima.jpg" alt="रिमा विश्वकर्मा" class="candidate-photo" onerror="this.style.opacity='0.4'; this.parentElement.querySelector('.candidate-name').style.marginTop='40px';">
+      <div class="candidate-name">रिमा विश्वकर्मा</div>
+      <div class="candidate-detail">कलाकार</div>
+      <div class="candidate-party">राष्ट्रिय स्वतन्त्र पार्टी</div>
+      <div class="candidate-cluster">दलित महिला</div>
+    </div>
+
+    <!-- Placeholder 1 -->
+    <div class="candidate-card">
+      <img src="images/photo/placeholder1.jpg" alt="अनिता श्रेष्ठ" class="candidate-photo" onerror="this.style.opacity='0.4';">
+      <div class="candidate-name">अनिता श्रेष्ठ</div>
+      <div class="candidate-detail">सामाजिक कार्यकर्ता</div>
+      <div class="candidate-party">नेपाली कांग्रेस</div>
+      <div class="candidate-cluster">मधेसी महिला</div>
+    </div>
+
+    <!-- Placeholder 2 -->
+    <div class="candidate-card">
+      <img src="images/photo/placeholder2.jpg" alt="कर्ण बहादुर राई" class="candidate-photo" onerror="this.style.opacity='0.4';">
+      <div class="candidate-name">कर्ण बहादुर राई</div>
+      <div class="candidate-detail">शिक्षाविद्</div>
+      <div class="candidate-party">एमाले</div>
+      <div class="candidate-cluster">जनजाति पुरुष</div>
+    </div>
+
+  </div>
+
+  <!-- Floating Buttons -->
+  <a href="index.html" class="floating-btn back-home" title="गृह पृष्ठमा जानुहोस्">🏠</a>
+  <a href="#" class="floating-btn back-top" id="backToTop" title="माथि जानुहोस्">↑</a>
+
+  <script>
+    document.getElementById('backToTop').addEventListener('click', function(e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+
+</body>
+</html>

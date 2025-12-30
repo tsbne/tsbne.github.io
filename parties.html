@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="images/fav.png">
+  <title>दर्ता भएका प्रमुख राजनैतिक दलहरू निर्वाचन २०८२</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+    :root {
+      --bg-page: #ffffff;
+      --card-bg: #ffffff;
+      --text-primary: #1a1a1a;
+      --text-secondary: #555555;
+      --border-color: #e0e0e0;
+      --shadow: rgba(0, 0, 0, 0.08);
+      --accent: #2e7d32;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg-page: #121212;
+        --card-bg: #1a1a1a;
+        --text-primary: #f0f0f0;
+        --text-secondary: #b0b0b0;
+        --border-olor: #333333;
+        --shadow: rgba(0, 0, 0, 0.3);
+      }
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Noto Sans Devanagari', sans-serif;
+      background-color: var(--bg-page);
+      color: var(--text-primary);
+      line-height: 1.6;
+      padding: 16px;
+      max-width: 1000px;
+      margin: 0 auto;
+      font-size: 1.05em;
+    }
+
+    h1 {
+      text-align: center;
+      margin: 24px 0 32px;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .cards-container {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .party-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 3px 10px var(--shadow);
+      text-align: center;
+    }
+
+    .party-name {
+      font-size: 1.3em;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: var(--accent);
+    }
+
+    .party-symbol {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      margin: 0 auto 16px;
+      display: block;
+      background: var(--bg-page);
+      padding: 8px;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+    }
+
+    .party-head {
+      font-weight: 600;
+      margin-bottom: 10px;
+      font-size: 1.1em;
+    }
+
+    .party-email {
+      color: var(--text-secondary);
+      font-size: 0.95em;
+      word-break: break-all;
+    }
+
+    @media (min-width: 600px) {
+      .cards-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 900px) {
+      .cards-container {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    /* ===== Floating Buttons ===== */
+    .floating-btn {
+      position: fixed;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s, background 0.2s;
+      z-index: 1000;
+      font-family: 'Noto Sans Devanagari', sans-serif;
+      font-size: 1.1em;
+    }
+
+    .back-home {
+      top: 20px;
+      left: 20px;
+      background: var(--accent);
+      color: white;
+    }
+
+    .back-top {
+      bottom: 20px;
+      right: 20px;
+      background: var(--text-primary);
+      color: white;
+    }
+
+    .back-home:hover,
+    .back-top:hover {
+      transform: scale(1.08);
+      opacity: 0.95;
+    }
+
+    /* Dark mode adjustment for back-top */
+    @media (prefers-color-scheme: dark) {
+      .back-top {
+        background: #444;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>२०८२ निर्वाचनका लागि दर्ता भएका राजनैतिक दलहरू</h1>
+
+  <div class="cards-container">
+	  
+	  
+    <div class="party-card">
+      <div class="party-name">राष्ट्रिय स्वतन्त्र पार्टी</div>
+      <img src="images/logo/rsp.png" alt="राष्ट्रिय स्वतन्त्र पार्टी प्रतीक" class="party-symbol">
+      <div class="party-head">रवि लामिछाने</div>
+      <div class="party-email">01-5914591</div>
+      <div class="party-email">info@rspnepal.org</div>
+    </div>
+
+  
+    <div class="party-card">
+      <div class="party-name">नेपाली कांग्रेस</div>
+      <img src="images/logo/congress.png" alt="नेपाली कांग्रेस प्रतीक" class="party-symbol">
+      <div class="party-head">शेरबहादुर देउवा</div>
+      <div class="party-email">01-5183303</div>
+      <div class="party-email">info@nepalicongress.org</div>
+
+    </div>
+
+    <div class="party-card">
+      <div class="party-name">नेकपा (एमाले)</div>
+      <img src="images/logo/uml.png" alt="एमाले प्रतीक" class="party-symbol">
+      <div class="party-head">केपी शर्मा ओली</div>
+      <div class="party-email">01-4378055</div>
+      <div class="party-email">partyhq@cpnuml.org</div>
+    </div>
+
+    <div class="party-card">
+      <div class="party-name">नेपाल कम्युनिष्ट पार्टी</div>
+      <img src="images/logo/cpn.png" alt="माओवादी प्रतीक" class="party-symbol">
+      <div class="party-head">पुष्प कमल दाहाल</div>
+      <div class="party-email">9851048272</div>
+      <div class="party-email">cpncentre@gmail.com</div>
+    </div>
+
+  </div>
+
+  <!-- Floating Buttons -->
+  <a href="index.html" class="floating-btn back-home" title="गृह पृष्ठमा जानुहोस्">🏠</a>
+  <a href="#" class="floating-btn back-top" id="backToTop" title="माथि जानुहोस्">↑</a>
+
+  <script>
+    // Smooth scroll to top
+    document.getElementById('backToTop').addEventListener('click', function(e) {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
+
+</body>
+</html>

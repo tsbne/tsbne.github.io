@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="images/fav.png">
+  <title>नेपाल निर्वाचन २०८२</title>
+
+	  <style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+    /* ===== Base Theme ===== */
+    :root {
+      --bg-page: #ffffff;
+      --bg-offwhite: #FFFFE0; /* Ivory for info card */
+      --bg-article: #ffffff;
+      --text-primary: #1a1a1a;
+      --text-secondary: #555555;
+      --border-color: #e0e0e0;
+      --shadow: rgba(0, 0, 0, 0.08);
+      --info-title-color: #1e40af; /* Bluish */
+      --article-title-color: #2e7d32; /* Dark green */
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg-page: #121212;
+        --bg-offwhite: #1e1e1e;
+        --bg-article: #1a1a1a;
+        --text-primary: #f0f0f0;
+        --text-secondary: #b0b0b0;
+        --border-color: #333333;
+        --shadow: rgba(0, 0, 0, 0.3);
+        --info-title-color: #60a5fa;
+        --article-title-color: #86efac;
+      }
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Noto Sans Devanagari', sans-serif;
+      background-color: var(--bg-page);
+      color: var(--text-primary);
+      line-height: 1.7;
+      padding: 16px;
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.1em;
+    }
+
+    /* ===== Countdown Banner ===== */
+    .countdown-banner {
+      background: var(--article-title-color);
+      color: white;
+      padding: 24px 16px;
+      border-radius: 14px;
+      text-align: center;
+      margin-bottom: 32px;
+      box-shadow: 0 5px 18px var(--shadow);
+    }
+
+    .countdown-number {
+      font-size: 2.4rem;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100px;
+      height: 100px;
+      background: white;
+      color: var(--article-title-color);
+      border: 3px solid white;
+      border-radius: 12px; /* Rounded square */
+      margin-top: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .countdown-number {
+        background: var(--bg-page);
+        color: var(--article-title-color);
+        border-color: white;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+      }
+    }
+
+    /* ===== Article Card ===== */
+    .article-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      margin-bottom: 30px;
+    }
+
+    .article-card {
+      background: var(--bg-article);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 22px;
+      box-shadow: 0 3px 12px var(--shadow);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .article-link:hover .article-card,
+    .article-link:focus .article-card {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 20px var(--shadow);
+      outline: none;
+    }
+
+    .article-card h3 {
+      color: var(--article-title-color);
+      margin-bottom: 12px;
+      font-weight: 600;
+      font-size: 1.35em;
+    }
+
+    .article-card p {
+      color: var(--text-secondary);
+      font-size: 1.05em;
+    }
+
+    /* ===== Info Card (at bottom) ===== */
+    .info-card {
+      background: var(--bg-offwhite);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 3px 12px var(--shadow);
+    }
+
+    .info-card h3 {
+      color: var(--info-title-color);
+      margin-bottom: 14px;
+      font-weight: 600;
+      font-size: 1.4em;
+    }
+
+    .info-card p {
+      color: var(--text-secondary);
+      font-size: 1.05em;
+    }
+
+    @media (min-width: 600px) {
+      body {
+        padding: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Countdown -->
+  <div class="countdown-banner">
+    <h2>प्रतिनिधि सभा निर्वाचन बाँकी दिन</h2>
+    <div class="countdown-number" id="days-remaining">–</div>
+    <p style="margin-top: 16px;">निर्वाचन मिति: फाल्गुन २१, २०८२</p>
+  </div>
+
+  <!-- Single Article Card -->
+  <a href="parties.html" class="article-link" tabindex="0">
+    <div class="article-card">
+      <h3>२०८२ निर्वाचनका लागि दर्ता भएका प्रमुख राजनैतिक दलहरु</h3>
+      <p>दलहरूको विवरण, प्रतीक, प्रमुख र सम्पर्क जानकारी हेर्नुहोस्।</p>
+    </div>
+  </a>
+  
+  <a href="proportional.html" class="article-link" tabindex="0">
+    <div class="article-card">
+      <h3>चर्चित समानुपातिक उम्मेद्वारहरु</h3>
+      <p>विभिन्‍न दलहरूले आफ्नो समानुपातिक सूचीमा पेश गरेका चर्चित र उल्‍लेखनिय उम्मेद्वारहरु।</p>
+    </div>
+  </a>
+
+  <!-- Voter Encouragement Info Card (at bottom) -->
+  <div class="info-card">
+    <h3>आफ्नो मत अवश्य दिनुहोस्!</h3>
+    <p>प्रत्येक मतले नेपालको भविष्य निर्माण गर्छ। फाल्गुन २१, २०८२ मा आफ्नो मतदान केन्द्रमा जानुहोस् र देश निर्माणमा सहभागी बन्नुहोस्।</p>
+  </div>
+
+  <script>
+    // Convert English digits to Nepali numerals
+    const nepaliDigits = ['०', '१', '२', '३', '४', '५', '६', '७', '८', '९'];
+    function toNepaliNumber(num) {
+      return num.toString().replace(/\d/g, d => nepaliDigits[parseInt(d)]);
+    }
+
+    function updateCountdown() {
+      const electionDate = new Date('2026-03-05T00:00:00');
+      const now = new Date();
+      const diffTime = electionDate - now;
+      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+      const el = document.getElementById('days-remaining');
+      if (diffDays > 0) {
+        el.textContent = toNepaliNumber(diffDays);
+      } else if (diffDays === 0) {
+        el.textContent = 'आज!';
+      } else {
+        el.textContent = 'निर्वाचन सम्पन्न भयो';
+      }
+    }
+
+    updateCountdown();
+  </script>
+
+</body>
+</html>
